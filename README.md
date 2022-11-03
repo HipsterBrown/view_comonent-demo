@@ -32,3 +32,9 @@ Install Postgres as desired.
 Run server in production mode: `RAILS_ENV=production rails s`.
 
 Load `/benchmark` and read server log.
+
+## Workshop Additions
+
+### RSpec + Capybara matchers
+
+### System spec example

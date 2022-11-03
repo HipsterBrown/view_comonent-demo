@@ -9,9 +9,6 @@ class CardComponent < ViewComponent::Base
   renders_one :body, lambda { |**args, &block|
     Slot.new(**args, classes: "d-Card-body #{args.fetch(:classes, '')}", &block)
   }
-  renders_one :footer, lambda { |**args, &block|
-    Slot.new(**args, classes: "d-Card-footer #{args.fetch(:classes, '')}", &block)
-  }
   renders_many :actions, lambda { |text:|
     content_tag(:button, text, class: 'btn BtnGroup-item')
   }

@@ -2,6 +2,6 @@
   "name": "demo",
   "private": true,
   "dependencies": {
-    "@primer/css": "^12.2.1"
+    "@primer/css": "^20.5.1"
   }
 }

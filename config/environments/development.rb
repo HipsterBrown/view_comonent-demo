@@ -54,6 +54,8 @@ Rails.application.configure do
 
   config.view_component.show_previews_source = true
 
+  config.view_component.preview_paths << "#{Rails.root}/spec/components/previews"
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 
