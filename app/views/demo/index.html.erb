@@ -5,3 +5,37 @@
     <%= render(Issues::BadgeComponent.new(state: issue.state.to_sym)) %>
   <% end %>
 <% end %>
+<%= render ExampleComponent.new message: 'Hello World!' %>
+<%= render ExampleComponent.new do %>
+  <h1>Welcome to the World of <a href="https://viewcomponent.org">ViewComponent!</a></h1>
+<% end %>
+<%= render ExampleComponent.with_collection [{message: 'one'}, {message: 'two'}, {message: 'three'}] %>
+
+<div class="m-3 col-4">
+<%= render CardComponent.new do |component| %>
+  <% component.with_header do %>
+    <h2>My cool card</h2>
+  <% end %>
+
+  <% component.with_body do %>
+    <p>This is some great content!</p>
+  <% end %>
+
+  <% component.with_actions([
+    { text: "Action!" },
+    { text: "Another one" },
+  ]) %>
+<% end %>
+</div>
+
+<div class="m-3 col-4">
+<%= render CardComponent.new do |component| %>
+  <% component.with_header do %>
+    <h2>Optional slots</h2>
+  <% end %>
+
+  <% component.with_body do %>
+    <p>No actions needed here!</p>
+  <% end %>
+<% end %>
+</div>

@@ -14,12 +14,12 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join("tmp", "caching-dev.txt").exist?
+  if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}",
+      'Cache-Control' => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -51,6 +51,8 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+
+  config.view_component.show_previews_source = true
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true

@@ -1,33 +1,35 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.3"
+ruby '3.0.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem "rails", "~> 7"
+gem 'rails', '~> 7'
 # Use postgresql as the database for Active Record
-gem "pg", ">= 0.18", "< 2.0"
+gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem "puma", "~> 4.3"
+gem 'puma', '~> 4.3'
 # Use SCSS for stylesheets
-gem "sassc-rails"
+gem 'sassc-rails'
 # Use Uglifier as compressor for JavaScript assets
-gem "uglifier", ">= 1.3.0"
+gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
-gem "octicons_helper"
+gem 'octicons_helper'
 
-gem "view_component"
+gem 'view_component'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem "bootsnap", ">= 1.1.0"
+gem 'bootsnap', '>= 1.1.0'
 
-gem "benchmark-ips"
+gem 'benchmark-ips'
 
 group :development, :test do
-  gem "capybara", "~> 3"
-  gem "factory_bot_rails"
+  gem 'capybara', '~> 3'
+  gem 'capybara-selenium'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails', '~> 6.0.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
