@@ -1,4 +1,4 @@
-# view-component-demo
+# ViewComponent Workshop Demo app
 
 Rails application with ViewComponent, using the `https://github.com/github/view_component` gem.
 
